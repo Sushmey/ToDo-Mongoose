@@ -3,7 +3,7 @@ const path = require('path');
 var app = express();
 var bodyParser = require('body-parser'); //middleware
 var mongoose = require('mongoose');
-
+app.use(express.static(__dirname + '/views'));
 
 mongoose.connect('mongodb://localhost/todo'); //Connecting to the local db
 
